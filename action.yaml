@@ -1,0 +1,7 @@
+# action.yml
+name: 'Hello World'
+description: 'Echos hello world from the cmd line'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
