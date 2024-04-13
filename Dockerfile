@@ -1,6 +1,6 @@
 FROM node:14
 
-COPY index.js /
+COPY index.js /index.js
 
 RUN npm install
 
