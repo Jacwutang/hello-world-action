@@ -2,10 +2,13 @@ FROM node:14
 
 WORKDIR /app
 
-COPY . .
+COPY index.js /index.js
 
-RUN npm install 
+RUN npm install
 
 EXPOSE 3000
+
+RUN pwd
+RUN ls
 
 ENTRYPOINT ["node", "index.js"]
