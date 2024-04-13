@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /app
+# WORKDIR /app
 
 COPY index.js /index.js
 
@@ -10,5 +10,6 @@ EXPOSE 3000
 
 RUN pwd
 RUN ls
+
 
 ENTRYPOINT ["node", "index.js"]
