@@ -1,6 +1,6 @@
 # action.yml
 name: 'Hello World'
-description: 'Echos hello world from the cmd line'
+description: 'Echos hello world from the node app'
 runs:
   using: 'docker'
   image: 'Dockerfile'

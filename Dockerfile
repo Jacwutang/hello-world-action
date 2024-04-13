@@ -1,20 +1,11 @@
-# Use a base image
-FROM alpine:latest
+FROM node:14
 
-# Set the working directory
 WORKDIR /app
 
-COPY . /app
+COPY . .
 
-# Echo "Hello, World!" to the console
-CMD ["echo", "Hello, World!"]
+RUN npm install 
 
+EXPOSE 3000
 
-
-#docker run -it <image_id> sh
-
-# Attach a Volume mount. Go inside /app and add a test file, it will be persisted after exiting the container
-# docker run -it --mount source=hello-world-volume,target=/app 2852fc29ab02 sh
-
-# Bind Mount (mutable changes within local FS)
-# docker run -it --mount type=bind, source="$(pwd)",target=/app 2852fc29ab02 sh
+ENTRYPOINT ["node", "index.js"]
